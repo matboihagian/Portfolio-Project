@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define a codificação de caracteres e a compatibilidade com navegadores -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página -->
+    <title>Mateus Boihagian Portfolio</title>
+    
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link para a biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!-- Seção principal do cabeçalho do site -->
+    <div class="hero-header">
+        <div class="wrapper">
+            <!-- Cabeçalho contendo o logotipo e a navegação -->
+            <header>
+                <nav>
+                    <!-- Botão para abrir e fechar o menu em telas menores -->
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- Links de navegação -->
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Sobre Mim</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <!-- Container principal com imagem e informações do usuário -->
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/MB.JPEG" alt="profile pic"> <!-- Imagem de perfil -->
+                </div>
+                <div class="hero-text">
+                    <h1>Mateus Boihagian<span class="input">Frontend Developer</span></h1> <!-- Nome do usuário com o efeito -->
+                    
+                    <p>Olá! Meu nome é Mateus de Almeida Martins Boihagian, sou desenvolvedor full-stack com experiência em Python, Java, JavaScript, HTML, CSS e SQL. Atualmente, estou cursando Engenharia da Computação na FIAP e já concluí um Tecnólogo em Marketing Digital.</p>
+                
+                    <p>Ao longo da minha jornada, trabalhei em diversos projetos que combinam tecnologia e inovação, desde desenvolvimento de aplicativos e sites até soluções em inteligência artificial e data science. Meus trabalhos incluem desde um sistema de marcação de consultas, passando por uma IA para gestão de eventos, até um app para monitoramento de pontos de recarga para veículos elétricos.</p>
+                    
+                    <p>Sou apaixonado por tecnologia e sempre busco novas oportunidades para aprender e aprimorar minhas habilidades. No meu portfólio, você encontrará alguns dos projetos que desenvolvi, bem como informações sobre minha trajetória acadêmica e profissional.</p>
+                        
+                    <p>Se quiser saber mais ou colaborar comigo, entre em contato! 🚀</p> <!-- Texto descritivo -->
+                
+                
+
+                    <!-- Botões para ações importantes -->
+                    <div class="btn-group">
+                        <a href="#" class="btn active">Download CV</a>
+                    </div>
+
+                    <!-- Links para redes sociais -->
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Biblioteca para efeito de digitação automática -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** Criando funcionalidade do botão de menu para dispositivos móveis **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        /** Criando efeito de digitação automática **/
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "Python Developer", "Web Developer", "Backend Developer", "Fullstack Developer", "Data Analyst"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
