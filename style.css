@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,6 +10,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: #222; /* Fundo igual ao da home */
 }
 
 .hero-header {
@@ -163,13 +165,20 @@ nav .navlinks li a {
 .btn-group .btn {
     border-color: #d5d5d5;
     color: #fff;
-    background-color: #333;
+    background-color: transparent; /* Fundo transparente para o estado normal */
     padding: 12px 25px;
     margin: 5px 0px;
     margin-right: 7px;
     border-radius: 30px;
-    border: 2px solid #e5e5e5;
+    border: 2px solid #d5d5d5; /* Cor da borda */
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-group .btn:hover {
+    background-color: #a0c9e6; /* Azul claro no fundo quando o mouse passar */
+    border-color: #007ced; /* Mantenha a borda em azul quando passar o mouse */
+    color: #000; /* Texto preto quando passar o mouse */
 }
 
 .btn.active {
@@ -186,6 +195,103 @@ nav .navlinks li a {
 .hero-text .social i:hover {
     color: #007ced;
     transform: rotate(360deg);
+}
+
+/* Seção "Sobre mim" */
+.about-me {
+    padding: 60px 0;
+    background-color: #222; /* Fundo igual ao da home */
+    color: #e5e5e5; /* Cor do texto */
+    text-align: center;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    color: #007ced; /* Azul destaque */
+    border-bottom: 2px solid #007ced;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Ajuste da galeria de fotos */
+.about-photos {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 40vw; /* Ajuste proporcional ao tamanho da tela */
+    height: auto;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+    /* Aplicando a mesma borda e sombra da foto de perfil */
+    border: 5px solid #444; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilização do texto da seção */
+.about-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Estilo do botão para voltar ao topo */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #007ced; /* Cor do ícone */
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #007ced; /* Cor de fundo quando passar o mouse */
+    color: white; /* Cor do ícone ao passar o mouse */
+}
+
+/* Ícone de seta para cima */
+.scroll-to-top i {
+    font-size: 1.8rem;
 }
 
 /* Responsive design & displaying navbar for small screens */

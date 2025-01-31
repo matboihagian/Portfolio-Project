@@ -12,6 +12,7 @@
     <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="style.css">
     
+    
     <!-- Link para a biblioteca de ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -31,8 +32,8 @@
                     <!-- Links de navegação -->
                     <ul class="navlinks">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Projetos</a></li>
                         <li><a href="#">Sobre Mim</a></li>
+                        <li><a href="#">Projetos</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
@@ -54,42 +55,75 @@
                         
                     <p>Se quiser saber mais ou colaborar comigo, entre em contato! 🚀</p> <!-- Texto descritivo -->
                 
-                
-
                     <!-- Botões para ações importantes -->
                     <div class="btn-group">
-                        <a href="#" class="btn active">Download CV</a>
+                        <a href="images/Mateus Boihagian - CV.pdf" class="btn active" download="Mateus Boihagian - CV.pdf">Download CV</a>
                     </div>
 
                     <!-- Links para redes sociais -->
                     <div class="social">
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mateusboihagian/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/mateus_amb/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
     
-    <!-- Biblioteca para efeito de digitação automática -->
+    <!-- Seção Sobre Mim -->
+    <section class="about-me">
+        <h2>Sobre mim</h2>
+        <div class="about-container">
+            <div class="about-photos">
+                <div class="photo-grid">
+                    <img src="images/MB.JPEG" alt="Foto 1">
+                    <img src="images/MB.JPEG" alt="Foto 2">
+                    <img src="images/MB.JPEG" alt="Foto 3">
+                    <img src="images/MB.JPEG" alt="Foto 4">
+                    <img src="images/MB.JPEG" alt="Foto 5">
+                    <img src="images/MB.JPEG" alt="Foto 6">
+                    <img src="images/MB.JPEG" alt="Foto 7">
+                    <img src="images/MB.JPEG" alt="Foto 8">
+                    <img src="images/MB.JPEG" alt="Foto 9">
+                </div>
+            </div>
+            <div class="about-text">
+                <p>
+                    Sou estudante de <strong>Engenharia da Computação na FIAP</strong> (7º semestre) e um apaixonado por tecnologia. 
+                    Desde cedo, sempre me interessei por resolver problemas e encontrar soluções inovadoras, 
+                    o que me levou a desenvolver habilidades em <strong>programação full-stack, inteligência artificial e integração de dados</strong>. 
+                    Gosto de desafios e vejo na tecnologia uma ferramenta poderosa para transformar ideias em realidade.
+                </p>
+                <p>
+                    Além do universo da tecnologia, os <strong>esportes</strong> sempre fizeram parte da minha vida. 
+                    A prática esportiva me ensinou valores fundamentais, como <strong>disciplina, resiliência e trabalho em equipe</strong>. 
+                    Competir me motiva a buscar sempre a minha melhor versão, seja em um projeto de software, 
+                    em um desafio acadêmico ou em um jogo. Acredito que a <strong>competição saudável</strong> 
+                    é um grande impulsionador de crescimento, pois nos desafia a superar limites e a evoluir constantemente.
+                </p>
+                <p>
+                    Outro pilar essencial na minha vida é a <strong>família</strong>. Sempre tive o privilégio de crescer em um ambiente de apoio e união, 
+                    onde aprendi a importância do compromisso, do respeito e da colaboração. 
+                    Esse laço familiar me ajudou a desenvolver um forte <strong>senso de responsabilidade e dedicação</strong>, 
+                    tanto na vida pessoal quanto na profissional.
+                </p>
+                <p>
+                    Gosto de trabalhar em equipe e acredito que grandes conquistas vêm do esforço coletivo. 
+                    Tenho um perfil <strong>adaptável e disciplinado</strong>, o que me permite lidar bem com desafios e aprender com cada experiência. 
+                    Minha jornada é movida pelo desejo de evoluir, inovar e contribuir para um mundo mais conectado e inteligente. 🚀
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Botão de ir para o topo -->
+    <button class="scroll-to-top">
+        <i class="fa fa-angle-double-up"></i>
+    </button>
+    
+    <!-- Referência ao arquivo JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
-        /** Criando funcionalidade do botão de menu para dispositivos móveis **/
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-        
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        });
-
-        /** Criando efeito de digitação automática **/
-        var typed = new Typed(".input", {
-            strings: ["Frontend Developer", "Python Developer", "Web Developer", "Backend Developer", "Fullstack Developer", "Data Analyst"],
-            typeSpeed: 70,
-            backSpeed: 55,
-            loop: true
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
