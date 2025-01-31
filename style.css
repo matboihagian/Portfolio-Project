@@ -199,15 +199,15 @@ nav .navlinks li a {
 
 /* Seção "Sobre mim" */
 .about-me {
-    padding: 60px 0;
-    background-color: #222; /* Fundo igual ao da home */
-    color: #e5e5e5; /* Cor do texto */
+    padding: 40px 0;
+    background-color: #222;
+    color: #e5e5e5;
     text-align: center;
 }
 
 .about-me h2 {
-    font-size: 2.5rem;
-    color: #007ced; /* Azul destaque */
+    font-size: 2rem;
+    color: #007ced;
     border-bottom: 2px solid #007ced;
     display: inline-block;
     padding-bottom: 10px;
@@ -216,12 +216,12 @@ nav .navlinks li a {
 
 .about-container {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha verticalmente os itens */
     justify-content: center;
-    gap: 50px;
-    padding: 50px;
-    max-width: 1280px;
-    margin: 0 auto;
+    gap: 20px;
+    padding: 30px;
+    max-width: 90vw;
+    width: 100%;
 }
 
 /* Ajuste da galeria de fotos */
@@ -233,39 +233,55 @@ nav .navlinks li a {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 40vw; /* Ajuste proporcional ao tamanho da tela */
+    grid-template-columns: repeat(3, 1fr); /* Mantém as 3 colunas */
+    gap: 7px;
+    width: 35vw;
     height: auto;
 }
+
+.photo-grid img:first-child { /* Seleciona a primeira imagem */
+    grid-column: 1 / 4; /* Estica a imagem por 3 colunas */
+    height: 300px; /* Altura da imagem esticada */
+}
+
 
 .photo-grid img {
     width: 100%;
-    height: auto;
+    height: 150px;
     border-radius: 10px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-    
-    /* Aplicando a mesma borda e sombra da foto de perfil */
-    border: 5px solid #444; 
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    border: 5px solid #444;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden; /* "Recorta" a imagem que vaza da moldura */
 }
 
 .photo-grid img:hover {
-    transform: scale(1.1);
+    transform: scale(1.7); /* Aumenta a escala da imagem */
+    z-index: 2; /* Sobrepõe a imagem às outras */
 }
 
 /* Estilização do texto da seção */
 .about-text {
     flex: 1;
-    max-width: 500px;
+    min-width: 500px;
+    max-width: 700px;
     text-align: left;
 }
 
+/* Ajusta o tamanho do wrapper para controlar a largura máxima da página */
+.wrapper {
+    width: 90%; /* Largura máxima da página */
+    max-width: 1200px; /* Largura máxima em pixels */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .about-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    font-size: 1.1rem; /* Aumenta um pouco a fonte */
+    line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
+    margin-bottom: 1rem; /* Aumenta o espaçamento entre os parágrafos */
 }
 
 /* Estilo do botão para voltar ao topo */
