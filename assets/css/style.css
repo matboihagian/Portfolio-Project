@@ -305,6 +305,133 @@ nav .navlinks li a {
     color: white; /* Cor do ícone ao passar o mouse */
 }
 
+/* Seção "Formações Acadêmicas e Certificações" */
+.formations-and-certificates {
+    padding: 60px 0; /* Aumenta o espaçamento vertical do título */
+    background-color: #222;
+    color: #e5e5e5;
+    text-align: center;
+}
+
+.formations-and-certificates h2 {
+    font-size: 2rem;
+    color: #007ced;
+    border-bottom: 2px solid #007ced;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 40px; /* Aumenta o espaçamento abaixo do título */
+}
+
+.formations-and-certificates .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.formations-and-certificates .formations {
+    width: 45%;
+}
+
+.formations-and-certificates .certificates {
+    width: 45%;
+}
+
+.formations-and-certificates .formations h3 {
+    color: #fff;
+    border-bottom: 2px solid #007ced;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.formations-and-certificates .certificates h3 {
+    color: #e5e5e5;
+    margin-bottom: 10px;
+}
+
+.formations-and-certificates p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.certificates-card {
+    width: 50%; /* Largura do card reduzida para 50% */
+    max-height: 300px;
+    overflow-y: auto;
+    border: 2px solid #007ced;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Centraliza o card horizontalmente */
+}
+
+.certificates-content {
+    /* Estilos para o conteúdo interno (opcional) */
+}
+
+.certificate-item {
+    margin-bottom: 10px;
+}
+
+.certificate-item h3 {
+    color: #e5e5e5;
+    margin-bottom: 5px;
+}
+
+.certificate-item {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: flex-center; /* Alinha os itens ao centro */
+    margin-bottom: 10px;
+}
+
+.certificate-item p {
+    order: 1; /* Posiciona o parágrafo na primeira linha */
+}
+
+.certificate-item a {
+    order: 2; /* Posiciona o link (e o botão) na segunda linha */
+    margin-top: 5px; /* Espaçamento entre as linhas */
+    align-self: flex-end; /* Alinha o botão ao final (direita) da linha */
+}
+.certificate-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove bordas */
+    color: #007ced; /* Cor do texto azul */
+    font-size: 0.8rem; /* Tamanho pequeno */
+    padding: 5px 10px; /* Espaçamento interno */
+    margin-left: 10px; /* Espaçamento à esquerda */
+    cursor: pointer; /* Cursor de mão */
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.certificate-button:hover {
+    color: #005ab5; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .formations-and-certificates .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formations-and-certificates .formations,
+    .formations-and-certificates .certificates {
+        width: 100%;
+        text-align: center;
+    }
+
+    .certificates-card {
+        width: 90%; /* Largura do card ajustada para telas menores */
+    }
+}
+
 /*=============== CARD ===============*/
 .projects_container {
     padding-block: 5rem;

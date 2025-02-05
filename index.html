@@ -37,16 +37,17 @@
                     </div>
                     <!-- Links de navegação -->
                     <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre Mim</a></li>
-                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutme">Sobre Mim</a></li>
+                        <li><a href="#formacoes">Formações Acadêmicas</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
             </header>
             
             <!-- Container principal com imagem e informações do usuário -->
-            <div class="container">
+            <div class="container" id="home">
                 <div class="hero-pic">
                     <img src="/assets/images/MB.JPEG" alt="profile pic"> <!-- Imagem de perfil -->
                 </div>
@@ -77,7 +78,7 @@
     </div>
     
     <!-- Seção Sobre Mim -->
-    <section class="about-me">
+    <section class="about-me" id="aboutme">
         <h2>Sobre mim</h2>
         <div class="about-container">
             <div class="about-photos">
@@ -124,7 +125,249 @@
         </div>
     </section>
     
-    <section class="projects_container">
+    <section class="formations-and-certificates" id="formacoes">
+        <h2>Formações Acadêmicas e Certificações</h2>
+        <div class="container">
+            <div class="formations">
+                <h3>Ensino Básico</h3>
+                <p>Colégio Agostiniano São José</p>
+
+                <h3>Bacharelado em Engenharia da Computação</h3>
+                <p>FIAP - 2022 - 2026</p>
+                <p>Cursando o 7º semestre.</p>
+
+                <h3>Tecnólogo em Marketing Digital</h3>
+                <p>FIAP - 2020 - 2022</p>
+                <p>Concluído em 2022.</p>
+            </div>
+    
+            <div class="certificates-card">
+                <div class="certificates-content">
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Imersão Dev Back-End com Google Gemini</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/immersion/certificate/d24b271e-2814-4f78-b8ef-17e2ee1342d3?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Data Science: explorando e analisando dados</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/certificate/ece6026d-b3a8-42ed-a5bc-36911c5bbada?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Data Science: testando hipóteses</h3>
+                            <p>Alura - <time datetime="2025">2025</time> 
+                                <a href="https://cursos.alura.com.br/certificate/5e824e88-240d-4ba2-8f0e-f4c4e37a58d5?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Excel: domine o editor de planilhas</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/certificate/31cc8ebc-21c4-409d-bfac-92e607e95a28?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Power BI</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/certificate/df82b228-016c-4bbf-bced-daf559bd0466?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Formação A partir do zero: HTML e CSS para projetos web</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/degree/certificate/ec54cc33-5e60-4124-8f36-3abb8dc578c3?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>HTML e CSS: Classes, posicionamento e Flexbox</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/certificate/75921355-fd2a-4dfe-8a63-cf58b09c71fe?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>HTML e CSS: praticando HTML/CSS</h3>
+                            <p>Alura - <time datetime="2024">2024</time> 
+                                <a href="https://cursos.alura.com.br/certificate/e8b7201a-2118-4ebd-a61b-7605175facac?lang" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Aprendendo Python: Conceitos Básicos</h3>
+                            <p>Asimov Academy - <time datetime="2025">2025</time> 
+                                <a href="https://hub.asimov.academy/validar-certificado/70b8ca6c-201e-4864-a2b3-ad0067b3843b" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Python Starter</h3>
+                            <p>Asimov Academy - <time datetime="2025">2025</time> 
+                                <a href="https://hub.asimov.academy/validar-certificado/89471393-8403-42fd-a437-92f79b78ae35" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Introdução à Lógica de Programação</h3>
+                            <p>Asimov Academy - <time datetime="2025">2025</time> 
+                                <a href="https://hub.asimov.academy/validar-certificado/d40285c5-7072-41c4-b171-55f0ca463675" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Front End </h3>
+                            <p>FIAP - <time datetime="2024">2024</time> 
+                                <a href="https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/114368/4c237d038aea1afb569a9ad245b4e0d6/certificado.png" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Responsive Web Development</h3>
+                            <p>FIAP - <time datetime="2024">2024</time> 
+                                <a href="https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/125025/58798976ecf47b1502ee7fd7d7d0ff1a/certificado.png" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Learn to Program</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/96395/c9c8f7f8c9463f0abacfa16c30bf7441/certificado.png" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Resolvendo Problemas com Matemática</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/93517/69247c34a5516f8d3da68b8d332558fa/certificado.png" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Certificado de Qualificação em Estratégia Exponencial e Tecnologias em Marketing Digital</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="https://www2.fiap.com.br/updown/DocumentosAssinados/49f8ce97-8d90-4755-bab0-d1cc2f82f2b2.pdf" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Certificado de Qualificação em Estratégia de Marketing e Inovação nos Negócios</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="https://www2.fiap.com.br/updown/DocumentosAssinados/09cd9fe6-42c2-4c9f-a423-0fd2642c012c.pdf" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Certificado de Qualificação em Marketing aplicado a User Experience e Data-Driven Decisions</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="https://www2.fiap.com.br/updown/DocumentosAssinados/9551a916-de5d-4ba1-b36d-9629e56b6519.pdf" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Certificado de Qualificação em Marketing aplicado a User Experience e Data-Driven Decisions</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h3>Certificado de Qualificação em Planejamento Estratégico e Inovação em Marketing Digital</h3>
+                            <p>FIAP - <time datetime="2023">2023</time> 
+                                <a href="https://on1.fiap.com.br/updown/DocumentosAssinados/6165f16b-e49c-4f8d-8b5e-17bc36eaabd5.pdf" target="_blank">
+                                    <button class="certificate-button" aria-label="Certificado Python Starter">Exibir credencial</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects_container" id="projetos">
         <h2>Projetos</h2>
         <div class="card__container">
             <button class="arrow-left">
