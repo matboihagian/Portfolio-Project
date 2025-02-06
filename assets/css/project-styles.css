@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+:root {
+    /*========== Colors ==========*/
+    --first-color: #007ced;
+    --first-color-alt: #005ab5;
+    --title-color: #e5e5e5;
+    --text-color: #e5e5e5;
+    --white-color: #fff;
+    --body-color: #222;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Space Grotesk', sans-serif;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: 1.1rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 500;
+    --font-bold: 700;
+
+    /*========== z index ==========*/
+    --z-normal: 1;
+    --z-modal: 1000;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--body-font); /* Use a variável para a fonte */
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--body-color); /* Use a variável para a cor de fundo */
+    color: var(--text-color); /* Use a variável para a cor do texto */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo do botão para voltar ao topo */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--first-color); /* Use a variável para a cor do ícone */
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--first-color); /* Use a variável para a cor de fundo no hover */
+    color: var(--white-color); /* Use a variável para a cor do ícone no hover */
+}
+
+/* Estilo do botão para voltar a pagina principal */
+
+.back-to-index {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Posicionado no lado esquerdo */
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #007ced; /* Mesma cor do botão de subir */
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    display: flex; /* Para centralizar o ícone */
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-index:hover {
+    background-color: #007ced;
+    color: white;
+}
+
+/*=============== CARD ===============*/
+.container {
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.container__title {
+    font-size: var(--h1-font-size);
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 3rem;
+}
+
+.card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card__project {
+    background-color: var(--body-color);
+    border: 4px solid var(--first-color);
+    padding-block: 1.25rem;
+    text-align: center;
+    display: grid;
+    row-gap: 1.5rem;
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card__project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    width: 200px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2));
+    transition: transform .3s;
+}
+
+.card__name {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #007ced;
+    text-align: center;
+}
+
+.card__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.card__project .card__img {
+    transform: scale(1.1);
+}
+
+/*=============== POPUP MODAL ===============*/
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(24px);
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: var(--z-modal);
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal__card {
+    position: relative;
+    background-color: var(--body-color);
+    padding: 3rem 1.25rem 2rem;
+    display: grid;
+    row-gap: 1.5rem;
+    text-align: center;
+    transform: rotateX(90deg);
+    transition: transform .6s;
+}
+
+.modal__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.modal__close:hover {
+    color: var(--first-color);
+}
+
+.modal__content {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modal__img {
+    width: 220px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2));
+}
+
+.modal__name {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: .5rem;
+}
+
+.modal__info {
+    margin-bottom: 1rem;
+}
+
+.modal__price {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--first-color);
+}
+
+.modal__buttons {
+    display: flex;
+    gap: .5rem;
+}
+
+.modal__button {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    padding-block: 1rem;
+    color: var(--white-color);
+    font: var(--font-semi-bold) var(--normal-font-size) var(--body-font);
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.modal__button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.modal__button-ghost {
+    background-color: var(--body-color);
+    color: var(--title-color);
+    border: 3px solid var(--first-color);
+    border-radius: 5px;
+}
+
+.modal__button-ghost:hover {
+    background-color: var(--body-color);
+}
+
+/* Active modal */
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+.active-modal .modal__card {
+    transform: scale(1);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 300px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .modal {
+        padding-inline: 1rem;
+    }
+
+    .modal__buttons {
+        flex-direction: column;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 540px) {
+    .card__container {
+        grid-template-columns: 330px;
+    }
+
+    .modal__card {
+        max-width: 350
+    }}
